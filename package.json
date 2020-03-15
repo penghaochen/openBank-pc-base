@@ -1,0 +1,67 @@
+{
+  "name": "vue-admin-template",
+  "version": "1.0.0",
+  "description": "A vue project with vue-element-admin ,use Element UI & axios & vuex & vue-router",
+  "author": "penghc <penghaochen610@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vue-cli-service serve --mode development",
+    "prod": "vue-cli-service serve --mode production",
+    "build:stage": "vue-cli-service build --mode staging",
+    "build:prod": "vue-cli-service build",
+    "preview": "node build/index.js --preview",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "dependencies": {
+    "@riophae/vue-treeselect": "^0.4.0",
+    "axios": "0.18.1",
+    "js-cookie": "2.2.0",
+    "normalize.css": "7.0.0",
+    "nprogress": "0.2.0",
+    "path-to-regexp": "2.4.0",
+    "tree-table-vue": "^1.1.0",
+    "vue": "2.6.10",
+    "vue-json-editor": "^1.3.2",
+    "vue-router": "3.0.6",
+    "vuex": "3.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.0",
+    "@babel/register": "7.0.0",
+    "@vue/cli-plugin-babel": "3.6.0",
+    "@vue/cli-plugin-eslint": "^3.9.1",
+    "@vue/cli-plugin-unit-jest": "3.6.3",
+    "@vue/cli-service": "3.6.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "autoprefixer": "^9.5.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "23.6.0",
+    "chalk": "2.4.2",
+    "connect": "3.6.6",
+    "eslint": "5.15.3",
+    "eslint-plugin-vue": "5.2.2",
+    "html-webpack-plugin": "3.2.0",
+    "mockjs": "1.0.1-beta3",
+    "node-sass": "^4.9.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "runjs": "^4.3.2",
+    "sass-loader": "^7.1.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.0.5",
+    "script-ext-html-webpack-plugin": "2.1.3",
+    "script-loader": "0.7.2",
+    "serve-static": "^1.13.2",
+    "svg-sprite-loader": "4.1.3",
+    "svgo": "1.2.2",
+    "vue-template-compiler": "2.6.10"
+  },
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
