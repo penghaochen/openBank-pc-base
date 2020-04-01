@@ -1,7 +1,7 @@
 /**
  * @description 用户信息配置
  */
-import {fetchDo} from "@/utils/fetch";
+// import {fetchDo} from "@/utils/fetch";
 import {setStore,removeStore} from '@/utils/store'
 const state = {
   userInfo: {},
@@ -136,17 +136,17 @@ const actions = {
   GetUserInfo({commit}) {
     
     return new Promise((resolve, reject) => {
-      
-      fetchDo('/admin/user/info',"",'get').then(res => {
+      resolve()
+      // fetchDo('/admin/user/info',"",'get').then(res => {
         
-        const data = res.data.data || {}
-        commit('SET_USERIFNO', data.sysUser)
-        commit('SET_ROLES', data.roles || [])
-        commit('SET_PERMISSIONS', data.permissions || [])
-        resolve(data)
-      }).catch((err) => {
-        reject()
-      })
+      //   const data = res.data.data || {}
+      //   commit('SET_USERIFNO', data.sysUser)
+      //   commit('SET_ROLES', data.roles || [])
+      //   commit('SET_PERMISSIONS', data.permissions || [])
+      //   resolve(data)
+      // }).catch((err) => {
+      //   reject()
+      // })
 
     })
   },

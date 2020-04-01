@@ -54,8 +54,8 @@
     randomLenNum
   } from "@/utils/index";
   import {
-    fetchDo
-  } from "@/utils/fetch"; // 发请求的公共方法
+    login
+  } from "@/api/login";
   export default {
     name: 'Login',
     data() {
@@ -121,10 +121,9 @@
     },
     mounted() {
       this.randomStr = randomLenNum(4, true)
-      this.codeImg = process.env.VUE_APP_BASE_API + '/code?randomStr=' + this.randomStr;
-      // fetchDo('/code?randomStr='+this.randomStr,"",'get').then(response => {
+      // this.codeImg = process.env.VUE_APP_BASE_API + '/code?randomStr=' + this.randomStr;
       //         this.codeImg=response.data
-      //     });
+
     },
     methods: {
       showPwd() {
@@ -149,8 +148,8 @@
               grant_type: "password",
               scope: "server"
             }
-            fetchDo('/auth/oauth/token', params, 'post').then(response => {
-
+            login(params).then(response=>{
+              this.loading = false
               this.$store.commit('user/SET_ACCESS_TOKEN', response.data.access_token)
               this.$store.commit('user/SET_REFRESH_TOKEN', response.data.refresh_token)
               this.$store.commit('user/SET_EXPIRES_IN', response.data.expires_in)
@@ -158,8 +157,20 @@
               this.$router.push({
                 path: this.redirect || '/'
               })
-              // this.loading = false
+            }).catch((err) => {
+              this.loading = false
             });
+            // fetchDo('/auth/oauth/token', params, 'post').then(response => {
+
+            //   this.$store.commit('user/SET_ACCESS_TOKEN', response.data.access_token)
+            //   this.$store.commit('user/SET_REFRESH_TOKEN', response.data.refresh_token)
+            //   this.$store.commit('user/SET_EXPIRES_IN', response.data.expires_in)
+            //   // this.$store.commit('user/CLEAR_LOCK')
+            //   this.$router.push({
+            //     path: this.redirect || '/'
+            //   })
+            //   // this.loading = false
+            // });
             // this.$store.dispatch('user/login', this.loginForm).then(() => {
             //   this.$router.push({ path: this.redirect || '/' })
             //   this.loading = false

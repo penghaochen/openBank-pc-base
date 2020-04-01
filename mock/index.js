@@ -1,14 +1,17 @@
 import Mock from 'mockjs'
 import { param2Obj } from '../src/utils'
 
+// 登录
 import login from './login'
+// 用户
 import userinfo from './user'
-
+// 系统管理
+import system from './system'
 
 const mocks = [
   ...login,
   ...userinfo,
-
+  ...system
 ]
 
 // for front mock

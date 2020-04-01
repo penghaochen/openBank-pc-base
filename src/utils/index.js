@@ -171,3 +171,21 @@ export const listToTree = (array, startPid, currentDept, opt) => {
   }
   return child
 }
+
+
+/**
+ *  将json变成序列化形式
+ * @param data json数据
+
+ * @returns {String}
+ */
+export const JsonToQueryString = (data) => {
+  let dataStr = ''; //数据拼接字符串
+  Object.keys(data).forEach(key => {
+    //过滤空字段
+    // if (data[key].length > 0 && data[key] !== undefined)
+    dataStr += key + '=' + data[key] + '&';
+  });
+  dataStr = dataStr.substr(0, dataStr.lastIndexOf('&'));
+  return dataStr
+}
