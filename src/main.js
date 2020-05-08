@@ -3,6 +3,7 @@
  * @author digua
  * @version 0.1.0
  */
+import '@babel/polyfill'
 import Vue from 'vue'
 
 import 'normalize.css/normalize.css' // 保持浏览器的一些默认样式

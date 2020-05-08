@@ -29,7 +29,7 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
-  productionSourceMap: false,
+  productionSourceMap: true,
   devServer: {
     port: port,
     open: true,
@@ -71,7 +71,10 @@ module.exports = {
       new webpack.NormalModuleReplacementPlugin(/element-ui[\/\\]lib[\/\\]locale[\/\\]lang[\/\\]en/, 'element-ui/lib/locale/lang/zh-CN')
     ]
   },
+
+  transpileDependencies: ['tree-table-vue', 'iview'],
   chainWebpack(config) {
+    // config.entry('polyfill').add('@babel/polyfill')
     config.plugins.delete('preload') // TODO: need test
     config.plugins.delete('prefetch') // TODO: need test
 

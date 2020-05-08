@@ -1,5 +1,5 @@
 {
-  "name": "vue-admin-template",
+  "name": "project-iview-base",
   "version": "1.0.0",
   "description": "A vue project with vue-element-admin ,use Element UI & axios & vuex & vue-router",
   "author": "penghc <penghaochen610@qq.com>",
@@ -13,6 +13,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.8.7",
     "@riophae/vue-treeselect": "^0.4.0",
     "axios": "0.18.1",
     "iview": "^3.5.4",
@@ -43,13 +44,13 @@
     "eslint": "5.15.3",
     "eslint-plugin-vue": "5.2.2",
     "html-webpack-plugin": "3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.0.5",
     "mockjs": "1.0.1-beta3",
     "node-sass": "^4.9.0",
     "resize-observer-polyfill": "^1.5.1",
     "runjs": "^4.3.2",
     "sass-loader": "^7.1.0",
-    "less": "^3.9.0",
-    "less-loader": "^4.0.5",
     "script-ext-html-webpack-plugin": "2.1.3",
     "script-loader": "0.7.2",
     "serve-static": "^1.13.2",
