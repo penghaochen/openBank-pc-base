@@ -3,7 +3,8 @@
  * @author digua
  * @version 0.1.0
  */
-import router from './router'
+// import router from './router'
+import router from './router/router.config'
 import store from './store'
 import NProgress from 'nprogress' // 顶部进度条
 import 'nprogress/nprogress.css' // 顶部进度条样式

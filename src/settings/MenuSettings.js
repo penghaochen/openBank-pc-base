@@ -39,7 +39,23 @@ const silderMenus = [
       }
       
     ]
-  }
+  },
+  {
+    path: "/sys",
+    meta: {
+      title: "工具组件",
+      icon: "example"
+    },
+    children: [
+      {
+        path: "empty",
+        meta: {
+          title: "测试用具",
+          icon: "table"
+        }
+      },
+    ]
+  },
 
 ];
 

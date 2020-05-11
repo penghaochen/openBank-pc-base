@@ -1,12 +1,21 @@
+/**
+ * @description 通讯公共方法
+ * @author digua
+ * @version 0.1.0
+ */
 import axios from 'axios'
 import store from '@/store'
-// import { getCookies } from '@/utils/auth'
-
-// create an axios instance
+import {
+  baseUrl,
+  timeout,
+  headers
+} from '@/api/api.config'
+import router from '@/router/router.config'
+import { encrypt, decrypt } from '@/utils/encryption/aes' // aes加解密方法
+// axios 配置
 const service = axios.create({
-  baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
-  withCredentials: true, // send cookies when cross-domain requests
-  timeout: 50000 // request timeout
+  baseURL: baseUrl, // 请求根路径
+  timeout: timeout // 超时时间
 })
 
 // request interceptor
